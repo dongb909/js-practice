@@ -8,13 +8,24 @@ function isPrime(number) {
 }
 
 function nthPrime(n){
-    primeArray = []
-    for (let i = 2; primeArray.length <= n ; i++){
+    var primeFound = 0
+    for (let i = 2; primeFound <= n ; i++){
         if (isPrime(i)) {
-            primeArray.push(i)
+            primeFound +=1
+            if (primeFound === n){
+                var ourPrime = i
+            }
         }
     }
-    return primeArray[n-1]
+    return ourPrime
 }
 
-console.log(nthPrime(3)) 
+console.log(nthPrime(5)) 
+
+
+// define i outside
+//terminating condition
+//code
+// incrementing i++
+// git add -A
+//dash is a flag a notation. do this under this condition
