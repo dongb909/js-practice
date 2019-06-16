@@ -10,7 +10,7 @@ function reverseByPivot(array, p) {
     // pivot.push(array[p])
     var pivotArray = []
     pivotArray = pivotArray.concat(firstHalf)
-    pivotArray = pivotArray.concat(array[p])
+    pivotArray = pivotArray.concat(array[p])        //cannot add arrays with +...weird...
     pivotArray = pivotArray.concat(secReverse)
     return pivotArray
 }
