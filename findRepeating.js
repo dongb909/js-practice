@@ -27,10 +27,13 @@ function findRepeating(string){
             startIndex = i
             charRepeat = 1
         }
-
+    endIndex = i                // explain why end Index is here within forloop and not outside?
     }
 
+    currentArray = [currentChar, startIndex, endIndex, charRepeat]
+    current = Array.from(currentArray)
+    repeatsFound.push(current)
    return repeatsFound
 }
 
-console.log(findRepeating("aabbbc"))
+console.log(findRepeating("aabbbaa"))
