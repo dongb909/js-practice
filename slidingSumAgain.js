@@ -1,7 +1,7 @@
 //Create a function that returns the subarrays of n consecutive elements from the original element that sum up to total. 
 //The function will have the following form: slidingSum(arr, n, k)
 
-
+// slice makes a new array. start and end index as arguments but have to assign a variable to it. if no arguments then it copies the entire array
 function sum(subarray){
     var nSum = 0
     for (var i = 0; i < subarray.length; i++){
@@ -17,13 +17,15 @@ function slidingSumAgain(array, n, total){
         currentArray.push(array[i])
     }
     if (sum(currentArray) === total){
-        finalArray.push(Array.from(currentArray))
+        // finalArray.push(Array.from(currentArray))
+        finalArray.push(currentArray.slice())
     }
     for (var i = n; i<array.length; i++){
         currentArray.shift()
         currentArray.push(array[i])
         if (sum(currentArray) === total){
-            finalArray.push(Array.from(currentArray))
+            // finalArray.push(Array.from(currentArray))
+            finalArray.push(currentArray.slice())
         }
     }
     

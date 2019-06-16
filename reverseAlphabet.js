@@ -37,8 +37,8 @@ function reverseAlphaString(nstring){
     var string = nstring.split("")                      //because can't modify a string
     for (var i = 0; i<string.length; i++){
         // if (alphaDict.indexOf(string[i])=== 1)          //cannot use .indexOf on a dictionary. only on an array
-        if (string[i] in alphaDict){
-            string[i] = alphaDict[string[i]]
+        if (string[i] in alphaDict){                        // 'in' is only for dictionaries eqive of .includes for an array --> these return T/F
+            string[i] = alphaDict[string[i]]                //.indexOf array returns a number -1 if not there OR the INDEX if there
         }
     }
     var finalString = string.join("")

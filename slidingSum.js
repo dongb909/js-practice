@@ -39,3 +39,7 @@ function slidingSum(array, n, total){
 
 testing = [3,4,1,9,9,0,3,5,4]
 console.log(slidingSum(testing,3,8))
+
+
+//Array is a class with functions within (aka method)
+//static from is scoped inside the Array, not acts on the object you're doing it to.
