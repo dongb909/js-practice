@@ -15,4 +15,4 @@ function sharedLetters(string1, string2){
     return letters
 }
 
-console.log(sharedLetters("abcdefg", "acpoifsdg"))
+console.log(sharedLetters("a", "a"))
