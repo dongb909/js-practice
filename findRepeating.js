@@ -10,6 +10,9 @@ Non-repeated values should start and end on the same index.
 */
 
 function findRepeating(string){
+    if (string.length === 0){
+        return []
+    }        
     var repeatsFound = []
     var charRepeat = 1
     var currentChar = string[0]     //A
@@ -27,7 +30,7 @@ function findRepeating(string){
             startIndex = i
             charRepeat = 1
         }
-    endIndex = i                // explain why end Index is here within forloop and not outside?
+    endIndex = i                // explain why end Index is here within forloop and not outside bc it's a part of what your doing in the string.
     }
 
     currentArray = [currentChar, startIndex, endIndex, charRepeat]
@@ -36,4 +39,4 @@ function findRepeating(string){
    return repeatsFound
 }
 
-console.log(findRepeating("aabbbaa"))
+console.log(findRepeating(""))
