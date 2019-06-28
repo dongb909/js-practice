@@ -12,7 +12,16 @@ const inventors = [
       { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
       { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
     ]
-
+var a = inventors.sort(function(a,b){
+    if (a.year > b.year){
+        return 1                //1 and -1 is just how it is. don't ask. 
+    } else if (a.year<b.year){  // means it doesn't trade places
+        return -1
+    } else{
+        return 0    // it just keeps going until all is sorted correctly
+    }
+})
+console.log(a)
 
 // // use .filter to return back an array of people born in the year 1700 and after
 // var bornAfter1700 = inventors.filter(function (obj){
@@ -73,6 +82,19 @@ const inventors = [
 // const one = "15.75.99";
 // const two = "42.1688";
 
+// function largestNum(one, two){
+//     var oneArr = one.split('.')
+//     var twoArr = two.split('.')
+//     if (parseInt(oneArr[oneArr.length -1]) > parseInt(twoArr[twoArr.length -1])){
+//         return 'One is larger than Two'
+//     } else if (parseInt(oneArr[oneArr.length - 1]) < parseInt(twoArr[twoArr.length -1])) {
+//         return 'Two is larger than One'
+//     } else {
+//         return 'Both numbers are equal'
+//     }
+// }
+
+// console.log(largestNum(one,two))
 // function largerNum(num1, num2){
 //   var numberedOne = getNum(num1)
 //   var numberedTwo = getNum(num2)
