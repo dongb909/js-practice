@@ -20,11 +20,11 @@ function digitByLengthThenNumber(arr){
     var arrByLength = arr.sort(function(a,b){
         if (String(Math.abs(a)).length > String(Math.abs(b)).length){       // to abs to account for neg sign
             return -1
-        } else if (String(Math.abs(a)).length < String(Math.abs(b)).length){
+        } else if (String(Math.abs(a)).length < String(Math.abs(b)).length){ // must string numbers because you can only do length on strings not numbers
             return 1
         } else if (a > b){
             return 1
-        } else if (a < b){
+        } else if (a < b){      //must to the a,b thing or else arr.sort() will sort it as a string
             return -1
         }
         else {
