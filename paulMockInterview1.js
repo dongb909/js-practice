@@ -21,7 +21,15 @@ var a = inventors.sort(function(a,b){
         return 0    // it just keeps going until all is sorted correctly
     }
 })
+
 console.log(a)
+
+
+//When comparing 40 and 100, the sort() method calls the compare function(40,100).
+
+//The function calculates 40-100, and returns -60 (a negative value).
+
+//The sort function will sort 40 as a value lower than 100.
 
 // // use .filter to return back an array of people born in the year 1700 and after
 // var bornAfter1700 = inventors.filter(function (obj){
