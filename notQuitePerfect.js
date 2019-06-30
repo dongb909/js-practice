@@ -51,4 +51,5 @@ function admirable(num){
     return 'Neither'
 }
 
-console.log(admirable(9))
+console.log(admirable(24))
+

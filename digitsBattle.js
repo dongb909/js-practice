@@ -18,3 +18,28 @@ battleOutcome(78925) ➞ 895
 Notes
 There are no winners in a battle with equal digits (neither should be printed).
 If the length of the number is odd, the lone digit should be printed at the end of the number.*/
+
+function digitsBattle(num){
+    var nums = String(num).split("")        //DOESN'T WORK BECAUSE YOU'RE COMPARING STRINGS AS IF THEY'RE NUMBERS
+    var wins = ""
+    while (nums.length >1) {
+        console.log(nums)
+        if (parseInt(nums[0])> parseInt(nums[1])){
+            wins = wins.concat(nums[0])
+            nums = nums.slice(2)
+        } else if (parseInt(nums[1]) > parseInt(nums[0])){
+            wins = wins.concat(nums[1])     
+            nums = nums.slice(2)
+        } else if (parseInt(nums[0]) === parseInt(nums[1])){
+            nums = nums.slice(2)
+        //} else if (parseInt(num[0]) && num[1] === undefined){       //no dont' do this bc it won't include the last single digit
+           // wins = wins.concat(nums[0])
+        }
+        if (nums.length === 1){
+            wins = wins.concat(nums[0])
+        }
+    }
+    return wins
+}
+
+console.log(digitsBattle(578921455))
