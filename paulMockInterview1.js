@@ -12,17 +12,47 @@ const inventors = [
       { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
       { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
     ]
-var a = inventors.sort(function(a,b){
-    if (a.year > b.year){
-        return 1                //1 and -1 is just how it is. don't ask. 
-    } else if (a.year<b.year){  // means it doesn't trade places
-        return -1
-    } else{
-        return 0    // it just keeps going until all is sorted correctly
-    }
-})
+//ONLY ITERATORS TAKE CALLBACKS AND ONLY .SORT HAS A DEFAULT WHERE A CALLBACK IS NOT NEEDED. ALL ELSE NEEDS A CALLBACK TO WORK
+// return an array of only inventors born after 1850
+// function bornAfter1850(inventors){
+//     return inventors.filter(function(obj){
+//         return obj.year >1850
+//     })
+// }
 
-console.log(a)
+// console.log(bornAfter1850(inventors))
+// function inOrderOfYear(objArr){
+//         objArr.sort(function(a,b){
+//     if (a.year > b.year){
+//         return 1
+//     } else if (a.year < b.year){
+//         return -1
+//     } else {
+//         return 0
+//     }
+// })
+//     return objArr
+// }
+
+// console.log(inOrderOfYear(inventors))
+
+
+
+
+
+
+
+// var a = inventors.sort(function(a,b){       //a and b are objs
+//     if (a.year > b.year){
+//         return 1                //1 and -1 is just how it is. don't ask. 
+//     } else if (a.year<b.year){  // means it doesn't trade places
+//         return -1
+//     } else{
+//         return 0    // it just keeps going until all is sorted correctly
+//     }
+// })
+
+// console.log(a)
 
 
 //When comparing 40 and 100, the sort() method calls the compare function(40,100).
@@ -87,8 +117,10 @@ console.log(a)
 
 // // HW: learn how to do this problem with split method and parseInt()
 
-// const one = "15.75.99";
-// const two = "42.1688";
+const one = "15.75.99";
+const two = "42.1688";
+
+
 
 // function largestNum(one, two){
 //     var oneArr = one.split('.')

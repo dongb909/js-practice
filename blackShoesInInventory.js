@@ -33,7 +33,7 @@ var currentInventory = [
         {name: 'tasselled black low-top lace-up', price: 1000},
         {name: 'tasselled green low-top lace-up', price: 1100},
         {name: 'plain beige suede moccasin', price: 950},
-        {name: 'plain olive suede moccasin', price: 1050}
+        {name: 'plain black suede moccasin', price: 1050}
       ]
     },
     {
@@ -46,4 +46,23 @@ var currentInventory = [
   ];
 
 
-  console.log(listAllBlackShoes(currentInventory))
+  // console.log(listAllBlackShoes(currentInventory))
+
+function blackShoes(currentInventory) {
+  var mappedParsedEntries = currentInventory.map(function(object) {
+    var currentName = object.name // Brunello
+    var shoesThatAreBlack = object.shoes.filter(function(shoeEntry) {
+      return shoeEntry.name.split(' ').includes('black') // tasseleledblack
+    })
+    var stringifiedEntries = []
+    for (var i = 0; i < shoesThatAreBlack.length; i++) {
+      var currentShoe = shoesThatAreBlack[i] // single shoe entry
+      var stringEntry = currentName + ' ' + currentShoe.name + ' ' + currentShoe.price
+      stringifiedEntries.push(stringEntry)
+    }
+    return stringifiedEntries.join('\n')
+  })
+  return mappedParsedEntries.join('\n')
+}
+
+console.log(blackShoes(currentInventory))

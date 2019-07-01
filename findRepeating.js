@@ -9,7 +9,7 @@ An empty string should return an empty array: "" ➞ []
 Non-repeated values should start and end on the same index.
 */
 
-function findRepeating(string){
+function findRepeating(string) {
     if (string.length === 0){
         return []
     }        

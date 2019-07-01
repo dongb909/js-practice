@@ -1,3 +1,4 @@
+
 function bubbleSort(array){
     var isSorted = true
     while (isSorted){

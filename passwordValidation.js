@@ -106,11 +106,11 @@ function passwordValidation(string){
 
 
 
-    // can only check for values in includesbut for sum you can do a function to return true if num > 100 without knowing the values
+    // can only check for values in includes but for some you can do a function to return true if num > 100 without knowing the values
     // ex: arry.some(function(num):
     // return num>100) will return true
 
     // .every also takes in a function but everything in the arr must meet the condition returns true or false
     // use find when care about the value of first one and use some when you only care that it exists true or false
 
-    // don't use indexOf, use findIndex instead (take in function)
+    // don't use indexOf, use findIndex instead (take in function) but it'll only give you the first index

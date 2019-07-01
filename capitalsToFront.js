@@ -24,5 +24,29 @@ function toFront(string){
 }
 
 
-testing = "Hi HoW Are YoU"
-console.log(toFront(testing))
+testing = "Hi HoW Are123%# Yo213U"
+// console.log(toFront(testing))
+
+var allUpperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')
+// split into each individual word
+// map over, each word, split to array, then filter twice
+// filter all capitals
+// filter no capitals
+// concat allCapital + noCapital, join('')
+
+function capitalsToFront(sentence) {
+    var wordsArray = sentence.split(' ')
+    var movedToFront = wordsArray.map(function(word) {
+        var splitWord = word.split('')
+        var capitalLetters = splitWord.filter(function(char) {
+            return allUpperCaseLetters.includes(char)
+        })
+        var nonCapital = splitWord.filter(function(char) {
+            return !allUpperCaseLetters.includes(char)
+        })
+        return capitalLetters.concat(nonCapital).join('')
+    })
+    return movedToFront.join(' ')
+}
+
+console.log(capitalsToFront(testing))
