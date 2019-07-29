@@ -25,11 +25,12 @@ const inventors = [
 //         objArr.sort(function(a,b){
 //     if (a.year > b.year){
 //         return 1
-//     } else if (a.year < b.year){
+//     } else if (b.year > a.year){
 //         return -1
-//     } else {
+//     } else{
 //         return 0
 //     }
+        
 // })
 //     return objArr
 // }
@@ -44,9 +45,9 @@ const inventors = [
 
 // var a = inventors.sort(function(a,b){       //a and b are objs
 //     if (a.year > b.year){
-//         return 1                //1 and -1 is just how it is. don't ask. 
+//         return -1                //1 and -1 is just how it is. don't ask. 
 //     } else if (a.year<b.year){  // means it doesn't trade places
-//         return -1
+//         return 1
 //     } else{
 //         return 0    // it just keeps going until all is sorted correctly
 //     }
@@ -119,7 +120,6 @@ const inventors = [
 
 const one = "15.75.99";
 const two = "42.1688";
-
 
 
 // function largestNum(one, two){

@@ -13,6 +13,7 @@ function duplicateArray(dups){
 
 
 
+
 testing = [1,1,3,4,6,7,7,9,9]
 console.log(duplicateArray(testing))
 

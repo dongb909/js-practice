@@ -53,7 +53,7 @@ function bSearch(arr, target) {
             max = midIdx - 1
         } else {
             min = midIdx
-            max = midIdx + Math.floor(max - min)
+            max = midIdx + Math.floor(max - min) 
         }
     }
     return false
